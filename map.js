@@ -3118,14 +3118,17 @@ Highcharts.mapChart('container', {
     if (point.controller === "Winged Hussars"){
     	point.graphic.addClass('WH');
     }
-     if (point.controller === "Help Force"){
+    if (point.controller === "Help Force"){
     	point.graphic.addClass('HF');
     }
-     if (point.controller === "Smart Penguins"){
+    if (point.controller === "Smart Penguins"){
     	point.graphic.addClass('SP');
     }
     if (point.controller === "Warlords of Kosmos"){
     	point.graphic.addClass('WOK');
+    }
+    if (point.controller === "Squids of Club Penguin"){
+    	point.graphic.addClass('SQUIDS');
     }
     
   });
