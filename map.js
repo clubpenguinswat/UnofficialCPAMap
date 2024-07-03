@@ -2046,7 +2046,7 @@ Highcharts.mapChart('container', {
         formatter: function() {
           // Check the "type" field of the point
           if (this.point.type === "CAPITAL") {
-            // Return the data label with yellow color
+            // Return the data label with red color
             return '<span style="color: red">' + this.point.name + '</span>';
           } else {
             // Return the data label with default color
@@ -3079,55 +3079,55 @@ Highcharts.mapChart('container', {
       // Add a class to the map area
       point.graphic.addClass('CPA');
     }
-    if (point.controller === "CPA Battleground"){
+    if (point.controller === "CPA Battleground") {
     	point.graphic.addClass('CPAB');
     }
-    if (point.controller === "Club Penguin Army Judges"){
+    if (point.controller === "Club Penguin Army Judges") {
     	point.graphic.addClass('CPAJ');
     }
-    if (point.controller === "Freeland"){
+    if (point.controller === "Freeland") {
     	point.graphic.addClass('Free');
     }
-    if (point.controller === "Water Vikings"){
+    if (point.controller === "Water Vikings") {
     	point.graphic.addClass('WV');
     }
-    if (point.controller === "Army of Club Penguin"){
+    if (point.controller === "Army of Club Penguin") {
     	point.graphic.addClass('ACP');
     }
-    if (point.controller === "Elite Guardians of Club Penguin"){
+    if (point.controller === "Elite Guardians of Club Penguin") {
     	point.graphic.addClass('EGCP');
     }
-    if (point.controller === "Special Weapons and Tactics"){
+    if (point.controller === "Special Weapons and Tactics") {
     	point.graphic.addClass('SWAT');
     }
-    if (point.controller === "Silver Empire"){
+    if (point.controller === "Silver Empire") {
     	point.graphic.addClass('SE');
     }
-    if (point.controller === "People's Imperial Confederation"){
+    if (point.controller === "People's Imperial Confederation") {
     	point.graphic.addClass('PIC');
     }
-    if (point.controller === "Dark Pirates"){
+    if (point.controller === "Dark Pirates") {
     	point.graphic.addClass('DP');
     }
-    if (point.controller === "Templars"){
+    if (point.controller === "Templars") {
     	point.graphic.addClass('TCP');
     }
-    if (point.controller === "Rebel Penguin Federation"){
+    if (point.controller === "Rebel Penguin Federation") {
     	point.graphic.addClass('RPF');
     }
-    if (point.controller === "Winged Hussars"){
+    if (point.controller === "Winged Hussars") {
     	point.graphic.addClass('WH');
     }
-    if (point.controller === "Help Force"){
+    if (point.controller === "Help Force") {
     	point.graphic.addClass('HF');
     }
-    if (point.controller === "Smart Penguins"){
+    if (point.controller === "Smart Penguins") {
     	point.graphic.addClass('SP');
     }
-    if (point.controller === "Warlords of Kosmos"){
+    if (point.controller === "Warlords of Kosmos") {
     	point.graphic.addClass('WOK');
     }
-    if (point.controller === "Squids of Club Penguin"){
+    if (point.controller === "Squids of Club Penguin") {
     	point.graphic.addClass('SQUIDS');
     }
     
