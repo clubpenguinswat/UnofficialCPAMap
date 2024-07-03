@@ -13,65 +13,69 @@ ARMYSHORT COMES FROM THE JAVASCRIPT AND IT IS THE CLASS MADE THERE
 */
 
 .CPA {
-    fill: #87d1ff;
+  fill: #87d1ff;
 }
 
 .CPAB {
-    fill: #dd2100;
+  fill: #dd2100;
 }
 
 .CPAJ {
-    fill: #ca2244;
+  fill: #ca2244;
 }
 
 .WV {
-    fill: #000080;
+  fill: #000080;
 }
 
 .ACP {
-    fill: #008000;
+  fill: #008000;
 }
 
 .EGCP {
-    fill: grey;
+  fill: grey;
 }
 
 .SWAT {
-    fill: #00ff00;
+  fill: #00ff00;
 }
 
 .SE {
-    fill: #ffffff; 
+  fill: #ffffff; 
 }
 
-.PIC{
+.PIC {
   fill: #333399;
 }
 
-.DP{
-     fill: #800000;
+.DP {
+  fill: #800000;
 }
 
-.TCP{
-     fill:#ffcc00;
+.TCP {
+  fill:#ffcc00;
 }
 
-.RPF{
-     fill:#000000;
+.RPF {
+  fill: #000000;
 }
 
-.WH{
-  fill:#ff0000;
+.WH {
+  fill: #ff0000;
 }
 
-.HF{
-  fill:#0000ff;
+.HF {
+  fill: #0000ff;
 }
 
-.SP{
+.SP {
   fill: red;
 }
 
-.WOK{
+.WOK {
   fill: black;
+}
+
+.SQUIDS {
+  fill: #99cc00;
 }
