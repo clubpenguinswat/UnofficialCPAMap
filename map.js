@@ -1557,7 +1557,7 @@ var mapData = [{
 },
 {
   "id": "id194",
-  "type": "NORMAL",
+  "type": "CAPITAL",
   "continent": "Legacy Lands",
   "controller": "Secret Service",
   "name": "Sub Zero",
