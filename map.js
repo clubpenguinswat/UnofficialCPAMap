@@ -2007,11 +2007,12 @@ var mapData = [{
 
 Highcharts.mapChart('container', {
     chart: {
-      height: (3 / 4 * 100) + '%',
+      height: (2.75 / 4 * 100) + '%',
       weight: 'auto',
       backgroundColor: '#003d62',
       type: 'line',
       map: 'cpa',
+      margin: 0
     },
     title: {
       text: ''
