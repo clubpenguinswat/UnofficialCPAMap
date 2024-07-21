@@ -21,6 +21,7 @@ main {
 
 main figure {
   width: 100%;
+  cursor: grab;
 }
 
 iframe {

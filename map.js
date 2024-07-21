@@ -2086,8 +2086,7 @@ if (location.pathname == `/army_code.html`) {
       map: {
         allAreas: false,
         joinBy: ['id', 'controller'],
-        keys: ['id', 'controller'],
-        
+        keys: ['id', 'controller']
       },
     },
     series: [{
@@ -2101,8 +2100,8 @@ if (location.pathname == `/army_code.html`) {
         formatter: function() {
           // Check the "type" field of the point
           if (this.point.type === "CAPITAL") {
-            // Return the data label with red color
-            return '<span style="color: red">' + this.point.name + '</span>';
+            // Return a larger data label with red color
+            return '<span style="color: red; font-size: 12px;">' + this.point.name + '</span>';
           } else {
             // Return the data label with default color
             return this.point.name;
