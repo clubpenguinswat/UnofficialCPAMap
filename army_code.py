@@ -16,6 +16,9 @@ search_terms = {
     "Help Force": "#0000ff",
     "Smart Penguins": "red",
     "Warlords of Kosmos": "black",
+    "Squids of Club Penguin": "#99cc00",
+    "Secret Service": "#ff0000",
+    "Spartans of Club Penguin": "#ff4704",
     "Freeland" : "grey"
 }
 
