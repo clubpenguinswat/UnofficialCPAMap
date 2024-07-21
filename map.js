@@ -2005,9 +2005,68 @@ var mapData = [{
 }
 ];
 
-Highcharts.mapChart('container', {
+if (location.pathname == `/army_code.html`) {
+
+  let landCount = {
+    TCP: 0,
+    EGCP: 0,
+    WH: 0,
+    HF: 0,
+    RPF: 0,
+    ACP: 0,
+    PIC: 0,
+    SS: 0,
+    WV: 0,
+    SQUIDS: 0,
+    SWAT: 0,
+    SPARTANS: 0,
+    CPA: 0,
+    CPAB: 0,
+    CPAJ: 0,
+    Freeland: 0
+  };
+
+  mapData.forEach(land => {
+    if (land.controller == `Templars`) landCount.TCP += 1;
+    if (land.controller == `Elite Guardians of Club Penguin`) landCount.EGCP += 1;
+    if (land.controller == `Winged Hussars`) landCount.WH += 1;
+    if (land.controller == `Help Force`) landCount.HF += 1;
+    if (land.controller == `Rebel Penguin Federation`) landCount.RPF += 1;
+    if (land.controller == `Army of Club Penguin`) landCount.ACP += 1;
+    if (land.controller == `People's Imperial Confederation`) landCount.PIC += 1;
+    if (land.controller == `Secret Service`) landCount.SS += 1;
+    if (land.controller == `Water Vikings`) landCount.WV += 1;
+    if (land.controller == `Squids of Club Penguin`) landCount.SQUIDS += 1;
+    if (land.controller == `Special Weapons and Tactics`) landCount.SWAT += 1;
+    if (land.controller == `Spartans of Club Penguin`) landCount.SPARTANS += 1;
+    if (land.controller == `Club Penguin Armies`) landCount.CPA += 1;
+    if (land.controller == `CPA Battleground`) landCount.CPAB += 1;
+    if (land.controller == `Club Penguin Army Judges`) landCount.CPAJ += 1;
+    if (land.controller == `Freeland`) landCount.Freeland += 1;
+  });
+
+  document.querySelector(`#land-count-TCP`).innerHTML = `(${landCount.TCP})`;
+  document.querySelector(`#land-count-EGCP`).innerHTML = `(${landCount.EGCP})`;
+  document.querySelector(`#land-count-WH`).innerHTML = `(${landCount.WH})`;
+  document.querySelector(`#land-count-HF`).innerHTML = `(${landCount.HF})`;
+  document.querySelector(`#land-count-RPF`).innerHTML = `(${landCount.RPF})`;
+  document.querySelector(`#land-count-ACP`).innerHTML = `(${landCount.ACP})`;
+  document.querySelector(`#land-count-PIC`).innerHTML = `(${landCount.PIC})`;
+  document.querySelector(`#land-count-SS`).innerHTML = `(${landCount.SS})`;
+  document.querySelector(`#land-count-WV`).innerHTML = `(${landCount.WV})`;
+  document.querySelector(`#land-count-SQUIDS`).innerHTML = `(${landCount.SQUIDS})`;
+  document.querySelector(`#land-count-SWAT`).innerHTML = `(${landCount.SWAT})`;
+  document.querySelector(`#land-count-SPARTANS`).innerHTML = `(${landCount.SPARTANS})`;
+  document.querySelector(`#land-count-CPA`).innerHTML = `(${landCount.CPA})`;
+  document.querySelector(`#land-count-CPAB`).innerHTML = `(${landCount.CPAB})`;
+  document.querySelector(`#land-count-CPAJ`).innerHTML = `(${landCount.CPAJ})`;
+  document.querySelector(`#land-count-Freeland`).innerHTML = `(${landCount.Freeland})`;
+
+} else {
+
+  Highcharts.mapChart('container', {
     chart: {
-      height: (2.75 / 4 * 100) + '%',
+      height: (3.5 / 4 * 100) + '%',
       weight: 'auto',
       backgroundColor: '#003d62',
       type: 'line',
@@ -2016,7 +2075,6 @@ Highcharts.mapChart('container', {
     },
     title: {
       text: ''
-
     },
     mapNavigation: {
       enabled: true
@@ -2032,16 +2090,12 @@ Highcharts.mapChart('container', {
         
       },
     },
-
     series: [{
-
       name: 'cpa',
       tooltip: {
         headerFormat: '',
         pointFormat: '<b>Server:</b> {point.name}<br><b>Controller:</b> {point.controller}<br><b>Type:</b> {point.type}<br><b>Continent:</b> {point.continent}'
       },
-
-
       dataLabels: {
         enabled: true,
         formatter: function() {
@@ -2056,7 +2110,6 @@ Highcharts.mapChart('container', {
         }
       },
       keys: ['id', 'controller'],
-
       type: "map",
       joinBy: "id",
       mapData: mapData,
@@ -3060,84 +3113,82 @@ Highcharts.mapChart('container', {
           "id": "id249",
           "y": 249
         }
-
       ]
-
     }]
   }, 
   
   //IMPORTANT IMPORTANT IMPORTANT
   //ARMY CODES GO HERE THEN INCLUDE THEM ON THE CSS PLEASE!
   function(chart) {
-  // Loop through each point in the series data
-  chart.series[0].points.forEach(function(point) {
-    // Check the "controller" field of each point
-    // for new armies put:
-    //if (point.controller === "ARMY NAME"){
-    //	point.graphic.addClass('ARMYSHORT'); *PLEASE USE ABBREV. HERE*
-    //}
-    if (point.controller === "Club Penguin Armies") {
-      // Add a class to the map area
-      point.graphic.addClass('CPA');
-    }
-    if (point.controller === "CPA Battleground") {
-    	point.graphic.addClass('CPAB');
-    }
-    if (point.controller === "Club Penguin Army Judges") {
-    	point.graphic.addClass('CPAJ');
-    }
-    if (point.controller === "Freeland") {
-    	point.graphic.addClass('Free');
-    }
-    if (point.controller === "Water Vikings") {
-    	point.graphic.addClass('WV');
-    }
-    if (point.controller === "Army of Club Penguin") {
-    	point.graphic.addClass('ACP');
-    }
-    if (point.controller === "Elite Guardians of Club Penguin") {
-    	point.graphic.addClass('EGCP');
-    }
-    if (point.controller === "Special Weapons and Tactics") {
-    	point.graphic.addClass('SWAT');
-    }
-    if (point.controller === "Silver Empire") {
-    	point.graphic.addClass('SE');
-    }
-    if (point.controller === "People's Imperial Confederation") {
-    	point.graphic.addClass('PIC');
-    }
-    if (point.controller === "Dark Pirates") {
-    	point.graphic.addClass('DP');
-    }
-    if (point.controller === "Templars") {
-    	point.graphic.addClass('TCP');
-    }
-    if (point.controller === "Rebel Penguin Federation") {
-    	point.graphic.addClass('RPF');
-    }
-    if (point.controller === "Winged Hussars") {
-    	point.graphic.addClass('WH');
-    }
-    if (point.controller === "Help Force") {
-    	point.graphic.addClass('HF');
-    }
-    if (point.controller === "Smart Penguins") {
-    	point.graphic.addClass('SP');
-    }
-    if (point.controller === "Warlords of Kosmos") {
-    	point.graphic.addClass('WOK');
-    }
-    if (point.controller === "Squids of Club Penguin") {
-    	point.graphic.addClass('SQUIDS');
-    }
-    if (point.controller === "Secret Service") {
-    	point.graphic.addClass('SS');
-    }
-    if (point.controller === "Spartans of Club Penguin") {
-    	point.graphic.addClass('SPARTANS');
-    }
-    
+    // Loop through each point in the series data
+    chart.series[0].points.forEach(function(point) {
+      // Check the "controller" field of each point
+      // for new armies put:
+      //if (point.controller === "ARMY NAME"){
+      //	point.graphic.addClass('ARMYSHORT'); *PLEASE USE ABBREV. HERE*
+      //}
+      if (point.controller === "Club Penguin Armies") {
+        // Add a class to the map area
+        point.graphic.addClass('CPA');
+      }
+      if (point.controller === "CPA Battleground") {
+        point.graphic.addClass('CPAB');
+      }
+      if (point.controller === "Club Penguin Army Judges") {
+        point.graphic.addClass('CPAJ');
+      }
+      if (point.controller === "Freeland") {
+        point.graphic.addClass('Free');
+      }
+      if (point.controller === "Water Vikings") {
+        point.graphic.addClass('WV');
+      }
+      if (point.controller === "Army of Club Penguin") {
+        point.graphic.addClass('ACP');
+      }
+      if (point.controller === "Elite Guardians of Club Penguin") {
+        point.graphic.addClass('EGCP');
+      }
+      if (point.controller === "Special Weapons and Tactics") {
+        point.graphic.addClass('SWAT');
+      }
+      if (point.controller === "Silver Empire") {
+        point.graphic.addClass('SE');
+      }
+      if (point.controller === "People's Imperial Confederation") {
+        point.graphic.addClass('PIC');
+      }
+      if (point.controller === "Dark Pirates") {
+        point.graphic.addClass('DP');
+      }
+      if (point.controller === "Templars") {
+        point.graphic.addClass('TCP');
+      }
+      if (point.controller === "Rebel Penguin Federation") {
+        point.graphic.addClass('RPF');
+      }
+      if (point.controller === "Winged Hussars") {
+        point.graphic.addClass('WH');
+      }
+      if (point.controller === "Help Force") {
+        point.graphic.addClass('HF');
+      }
+      if (point.controller === "Smart Penguins") {
+        point.graphic.addClass('SP');
+      }
+      if (point.controller === "Warlords of Kosmos") {
+        point.graphic.addClass('WOK');
+      }
+      if (point.controller === "Squids of Club Penguin") {
+        point.graphic.addClass('SQUIDS');
+      }
+      if (point.controller === "Secret Service") {
+        point.graphic.addClass('SS');
+      }
+      if (point.controller === "Spartans of Club Penguin") {
+        point.graphic.addClass('SPARTANS');
+      }
+    });
   });
 
-});
+}

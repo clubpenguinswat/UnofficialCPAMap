@@ -1,0 +1,27 @@
+
+.footer-text {
+  position: fixed left;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+main figure {
+  width: 100%;
+}
+
+iframe {
+  background: rgba(255, 255, 255, 0.185);
+  border-radius: 10px;
+}
+
+.army-code span {
+  filter: brightness(calc((100% / 3) * 2));
+}
