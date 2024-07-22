@@ -2005,7 +2005,7 @@ var mapData = [{
 }
 ];
 
-if (location.pathname == `/army_code.html`) {
+if (location.pathname.search(`/army_code.html`) != -1) {
 
   let landCount = {
     TCP: 0,
