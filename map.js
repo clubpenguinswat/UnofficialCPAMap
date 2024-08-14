@@ -1351,7 +1351,7 @@ var mapData = [{
   "id": "id168",
   "type": "NORMAL",
   "continent": "Legacy Lands",
-  "controller": "Templars of Club Penguin",
+  "controller": "Templars",
   "name": "Ice Berg",
   "path": "M1530,1014C1530,1013,1529,1012,1529,1012,1528,1012,1527,1012,1526,1011,1526,1010,1524,1009,1522,1009,1517,1008,1515,1004,1515,999,1515,996,1515,995,1513,993,1511,991,1511,991,1514,986,1515,985,1516,983,1517,982,1518,980,1519,979,1521,978,1523,977,1524,977,1527,974,1528,973,1529,972,1529,972,1530,972,1531,972,1531,971,1534,969,1543,969,1546,971,1547,972,1550,972,1551,972,1552,972,1555,973,1556,974,1557,975,1559,976,1559,976,1561,976,1563,980,1564,984,1565,991,1565,997,1563,999,1562,999,1561,1000,1561,1001,1561,1002,1560,1002,1560,1002,1559,1002,1558,1003,1558,1004,1557,1005,1556,1006,1552,1005,1550,1005,1548,1005,1547,1004,1546,1002,1541,1002,1539,1003,1538,1004,1537,1005,1537,1007,1536,1008,1536,1009,1535,1009,1535,1009,1534,1011,1534,1012,1533,1015,1531,1016,1530,1014z"
 },
@@ -1583,7 +1583,7 @@ var mapData = [{
   "id": "id197",
   "type": "NORMAL",
   "continent": "Legacy Lands",
-  "controller": "Templars of Club Penguin",
+  "controller": "Templars",
   "name": "Yukon",
   "path": "M1138,866C1136,865,1134,862,1134,859,1134,858,1133,857,1133,857,1133,857,1132,856,1132,855,1132,854,1131,853,1130,853,1130,853,1129,852,1129,851,1129,850,1128,849,1128,848,1126,847,1126,846,1126,843,1126,839,1126,838,1124,837,1122,835,1122,835,1122,832,1123,829,1124,828,1128,827,1130,826,1132,829,1134,832,1135,835,1136,836,1139,836,1140,836,1141,837,1141,839,1142,841,1143,842,1149,844,1153,845,1154,846,1157,849,1158,851,1159,851,1162,851,1163,851,1165,851,1166,852,1167,852,1168,852,1170,851,1172,849,1174,850,1174,852,1175,852,1175,854,1176,854,1178,856,1179,863,1178,865,1178,866,1177,867,1174,866,1171,866,1169,865,1169,865,1169,865,1165,864,1160,864,1153,864,1151,864,1150,865,1148,867,1141,867,1138,866z"
 },
@@ -2020,6 +2020,7 @@ if (location.pathname.search(`/army_code.html`) != -1) {
     SQUIDS: 0,
     SWAT: 0,
     SPARTANS: 0,
+    SCARS: 0,
     CPA: 0,
     CPAB: 0,
     CPAJ: 0,
@@ -2039,6 +2040,7 @@ if (location.pathname.search(`/army_code.html`) != -1) {
     if (land.controller == `Squids of Club Penguin`) landCount.SQUIDS += 1;
     if (land.controller == `Special Weapons and Tactics`) landCount.SWAT += 1;
     if (land.controller == `Spartans of Club Penguin`) landCount.SPARTANS += 1;
+    if (land.controller == `Scars of Club Penguin`) landCount.SCARS += 1;
     if (land.controller == `Club Penguin Armies`) landCount.CPA += 1;
     if (land.controller == `CPA Battleground`) landCount.CPAB += 1;
     if (land.controller == `Club Penguin Army Judges`) landCount.CPAJ += 1;
@@ -2057,6 +2059,7 @@ if (location.pathname.search(`/army_code.html`) != -1) {
   document.querySelector(`#land-count-SQUIDS`).innerHTML = `(${landCount.SQUIDS})`;
   document.querySelector(`#land-count-SWAT`).innerHTML = `(${landCount.SWAT})`;
   document.querySelector(`#land-count-SPARTANS`).innerHTML = `(${landCount.SPARTANS})`;
+  document.querySelector(`#land-count-SCARS`).innerHTML = `(${landCount.SCARS})`;
   document.querySelector(`#land-count-CPA`).innerHTML = `(${landCount.CPA})`;
   document.querySelector(`#land-count-CPAB`).innerHTML = `(${landCount.CPAB})`;
   document.querySelector(`#land-count-CPAJ`).innerHTML = `(${landCount.CPAJ})`;
@@ -3186,6 +3189,9 @@ if (location.pathname.search(`/army_code.html`) != -1) {
       }
       if (point.controller === "Spartans of Club Penguin") {
         point.graphic.addClass('SPARTANS');
+      }
+      if (point.controller === "Scars of Club Penguin") {
+        point.graphic.addClass('SCARS');
       }
     });
   });
