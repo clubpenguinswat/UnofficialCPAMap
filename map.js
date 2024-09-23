@@ -4,7 +4,7 @@
 
 //MAP STARTS HERE!!
 
-fetch("/mapdata.json").then(res => res.json()).then(data => map(data));
+fetch("mapdata.json").then(res => res.json()).then(data => map(data));
 
 function map(data) {
   let mapData = [
