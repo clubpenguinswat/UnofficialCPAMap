@@ -346,6 +346,7 @@ function map(data) {
       SWAT: 0,
       SPARTANS: 0,
       SCARS: 0,
+      ALIENS: 0,
       CPA: 0,
       CPAB: 0,
       CPAJ: 0,
@@ -365,6 +366,7 @@ function map(data) {
       if (land.controller == `Squids of Club Penguin`) landCount.SQUIDS += 1;
       if (land.controller == `Special Weapons and Tactics`) landCount.SWAT += 1;
       if (land.controller == `Spartans of Club Penguin`) landCount.SPARTANS += 1;
+      if (land.controller == `Aliens of Club Penguin`) landCount.ALIENS += 1;
       if (land.controller == `Scars of Club Penguin`) landCount.SCARS += 1;
       if (land.controller == `Club Penguin Armies`) landCount.CPA += 1;
       if (land.controller == `CPA Battleground`) landCount.CPAB += 1;
@@ -381,6 +383,7 @@ function map(data) {
     document.querySelector(`#land-count-SWAT`).innerHTML = `(${landCount.SWAT})`;
     document.querySelector(`#land-count-SPARTANS`).innerHTML = `(${landCount.SPARTANS})`;
     document.querySelector(`#land-count-SCARS`).innerHTML = `(${landCount.SCARS})`;
+    document.querySelector(`#land-count-ALIENS`).innerHTML = `(${landCount.SCARS})`;
     document.querySelector(`#land-count-Freeland`).innerHTML = `(${landCount.Freeland})`;
 
   } else {
@@ -673,6 +676,9 @@ function map(data) {
         }
         if (point.controller === "Scars of Club Penguin") {
           point.graphic.addClass('SCARS');
+        }
+        if (point.controller === "Aliens of Club Penguin") {
+          point.graphic.addClass('ALIENS');
         }
       });
     });
